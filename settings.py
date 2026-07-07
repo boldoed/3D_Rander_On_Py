@@ -7,6 +7,7 @@ HALF_WIDTH = WIDTH // 2
 HALF_HEIGHT = HEIGHT // 2
 FPS = 60
 TILE = 100
+FPS_POS = (WIDTH - 65, 5)
 
 # colors
 WHITE = (255, 255, 255)

@@ -16,7 +16,7 @@ def ray_casting(sc, player_pos, player_angle):
                 depth *= math.cos(player_angle - cur_angle)
                 proj_height = PROJ_COEFF / depth
                 c = 255 / (1 + depth * depth * 10 ** -5)
-                color = (c // 2, c // 4, c // 3)
+                color = (c, c // 3, c // 4)
                 pygame.draw.rect(sc, color, (ray * SCALE, HALF_HEIGHT - proj_height // 2, SCALE, proj_height))
                 break
         cur_angle += DELTA_ANGLE
