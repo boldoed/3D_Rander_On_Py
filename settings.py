@@ -13,7 +13,7 @@ FPS_POS = (WIDTH - 65, 5)
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 RED = (255, 0, 0)
-GREEN = (0, 255, 0)
+GREEN = (0, 100, 0)
 BLUE = (100, 100, 200)
 DARK_GRAY = (100, 100, 100)
 PURPLE = (120, 0, 120)
@@ -26,9 +26,14 @@ player_speed = 2
 #ray casting 
 FOV = math.pi / 3
 HALF_FOV = FOV / 2
-NUM_RAYS = 120
+NUM_RAYS = 300
 MAX_DEPTH = 800
 DELTA_ANGLE = FOV / NUM_RAYS
 DIST = NUM_RAYS / (2 * math.tan(HALF_FOV))
-PROJ_COEFF =  3 * DIST * TILE
+PROJ_COEFF =  DIST * TILE
 SCALE = WIDTH // NUM_RAYS
+
+#map
+MAP_SCALE = 5
+MAP_TILE = TILE // MAP_SCALE
+MAP_POS = (0, 0)
