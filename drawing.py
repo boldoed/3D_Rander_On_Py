@@ -29,12 +29,12 @@ class Drawing:
         self.sc.blit(render, FPS_POS)
 
     def mini_map(self, player):
-        self.sc_map.fill(BLACK)
+        self.sc_map.fill(LIGHT_BLUE)
         map_x, map_y = player.x // MAP_SCALE, player.y // MAP_SCALE
 
         pygame.draw.line(self.sc_map, WHITE, (map_x, map_y), (map_x + 15 * math.cos(player.angle), map_y + 15 * math.sin(player.angle)), 2)
         pygame.draw.circle(self.sc_map, RED, (map_x, map_y), 5)
 
         for x,y in mini_map:
-            pygame.draw.rect(self.sc_map, GREEN, (x, y, MAP_TILE, MAP_TILE))
+            pygame.draw.rect(self.sc_map, BROWN, (x, y, MAP_TILE, MAP_TILE))
         self.sc.blit(self.sc_map, MAP_POS)

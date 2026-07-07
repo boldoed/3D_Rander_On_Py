@@ -9,6 +9,7 @@ FPS = 60
 TILE = 100
 FPS_POS = (WIDTH - 35, 5)
 PENTA_HEIGHT = 5 * HEIGHT
+DOUBLE_PI = math.pi * 2
 
 # colors
 WHITE = (255, 255, 255)
@@ -18,6 +19,8 @@ GREEN = (0, 100, 0)
 BLUE = (100, 100, 200)
 DARK_GRAY = (100, 100, 100)
 PURPLE = (120, 0, 120)
+LIGHT_BLUE = (100, 100, 255)
+BROWN = (100, 70, 50)
 
 #player
 player_pos = (HALF_WIDTH, HALF_HEIGHT)
