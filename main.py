@@ -7,7 +7,8 @@ from drawing import Drawing
 
 pygame.init()
 sc = pygame.display.set_mode((WIDTH, HEIGHT))
-sc_map = pygame.Surface((WIDTH // MAP_SCALE, HEIGHT // MAP_SCALE))
+sc_map = pygame.Surface(MINIMAP_RES)
+
 clock = pygame.time.Clock()
 player = Player()
 drawing = Drawing(sc, sc_map)
@@ -20,7 +21,7 @@ while True:
     player.movement()
     sc.fill(BLACK)
 
-    drawing.background()
+    drawing.background(player.angle)
     drawing.world(player.pos, player.angle)
     drawing.fps(clock)
     drawing.mini_map(player)
